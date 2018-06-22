@@ -1,0 +1,17 @@
+header{
+  width: 100%;
+  height: 70px;
+  background-color: $colore_primario;
+  border-bottom:2px solid $colore_boolpress;
+  .header_container{
+    width: 80%;
+    height: 100%;
+    margin:auto;
+    color:$colore_boolpress;
+    line-height: 70px;
+    h1{
+      text-align: center;
+      font-size: 2.5em;
+    }
+  }
+}

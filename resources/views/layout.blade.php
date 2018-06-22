@@ -5,6 +5,7 @@
     <title></title>
     <link rel="stylesheet" href="/css/app.css">
   </head>
+  @include('partials/_header')
   <body>
     @yield('section')
   </body>
