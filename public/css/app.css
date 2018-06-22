@@ -30,3 +30,29 @@ header .header_container h1 {
   font-size: 2.5em;
 }
 
+.body_container {
+  margin-top: 100px;
+  width: 80%;
+  height: 100%;
+  margin: auto;
+}
+
+.body_container form {
+  padding-top: 10px;
+  line-height: 100px;
+  background-color: #68db4e;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  height: 300px;
+}
+
+.body_container form input {
+  height: 50px;
+}
+
+.body_container form #content {
+  width: 80%;
+  max-height: 100px;
+}
+

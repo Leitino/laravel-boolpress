@@ -12,3 +12,4 @@
 */
 
 Route::get('/home', 'boolpressController@home')->name('home');
+Route::match(['get', 'post'], '/add', 'boolpressController@add')->name('add');

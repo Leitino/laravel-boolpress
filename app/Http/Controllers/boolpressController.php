@@ -11,4 +11,7 @@ class boolpressController extends Controller
       $posts = post::all();
       return view ('home',['posts'=>$posts]);
     }
+    public function add(){
+      return view('add');
+    }
 }
