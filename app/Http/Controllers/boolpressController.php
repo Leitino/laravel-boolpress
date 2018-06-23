@@ -32,4 +32,22 @@ class boolpressController extends Controller
         abort(404);
       return view('post_dettaglio',['post'=>$postVisionato]);
     }
+    public function edit(Request $request, $id){
+      $post = post::find($id);
+      if ($request->method()=='GET') {
+        return view('edit', ['post'=>$post]);
+      }
+      elseif ($request->method()=='POST') {
+        $post->titolo = $request->input('titolo');
+        $post->sotto_titolo = $request->input('sotto_titolo');
+        $post->content = $request->input('content');
+        $post->slug = $request->input('slug');
+        $post->immagine = $request->input('immagine');
+        $post->autore = $request->input('autore');
+
+        $post->save();
+        return redirect('home');
+
+      }
+    }
 }
