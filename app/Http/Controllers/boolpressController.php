@@ -12,8 +12,10 @@ class boolpressController extends Controller
       return view ('home',['posts'=>$posts]);
     }
     public function add(Request $request){
-      if ($request-> method()=='GET')
-        return view('add');
+      if ($request-> method()=='GET'){
+        $posts = post::all();
+        return view('add', ['posts' =>$posts]);
+      }
       elseif ($request->method()=='POST') {
         $post = new post();
         $post->titolo = $request->input('titolo');

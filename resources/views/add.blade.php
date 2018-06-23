@@ -1,6 +1,10 @@
 @extends('layout')
 @section('section')
   <div class="body_container">
+    <div class="post-add">
+      <h1>aggiungi nuovo post</h1>
+
+    </div>
     <form class="" action="{{route('add')}}" method="post">
       {{ csrf_field() }}
       <div class="">
@@ -15,6 +19,27 @@
       <textarea name="content" rows="8" cols="80" placeholder="testo del post"></textarea>
 
     </form>
+    <div class="post-edit">
+      <h1>modifica i post</h1>
+
+    </div>
+    @foreach ($posts as $post)
+      <div class="post">
+        <div class="post_img">
+          <img src="{{$post['immagine']}}" alt="">
+        </div>
+        <div class="post_testo">
+          <h3>{{$post['titolo']}}</h3>
+          <p>{{$post['content']}}</p>
+          <div class="modifica">
+            <a href="{{route('edit', ['id'=> $post['id']])}}"><span>modifica</span></a> <span>elimina</span>
+          </div>
+
+
+        </div>
+
+      </div>
+    @endforeach
 
   </div>
 
