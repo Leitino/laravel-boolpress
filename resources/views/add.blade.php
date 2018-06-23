@@ -32,7 +32,7 @@
           <h3>{{$post['titolo']}}</h3>
           <p>{{$post['content']}}</p>
           <div class="modifica">
-            <a href="{{route('edit', ['id'=> $post['id']])}}"><span>modifica</span></a> <span>elimina</span>
+            <a href="{{route('edit', ['id'=> $post['id']])}}"><span>modifica</span></a>  <a href="{{route('delete', ['id'=>$post['id']])}}"><span>elimina</span></a>
           </div>
 
 

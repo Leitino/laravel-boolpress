@@ -59,6 +59,10 @@ header .header_container h1 {
   color: red;
 }
 
+.modifica a {
+  text-decoration: none;
+}
+
 .body_container {
   width: 70%;
   height: 100%;

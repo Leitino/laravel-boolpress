@@ -52,4 +52,10 @@ class boolpressController extends Controller
 
       }
     }
+    public function delete(Request $request, $id){
+      $post = post::find($id);
+
+      $post->delete();
+      return redirect('home');
+    }
 }
