@@ -11,7 +11,25 @@ class boolpressController extends Controller
       $posts = post::all();
       return view ('home',['posts'=>$posts]);
     }
-    public function add(){
-      return view('add');
+    public function add(Request $request){
+      if ($request-> method()=='GET')
+        return view('add');
+      elseif ($request->method()=='POST') {
+        $post = new post();
+        $post->titolo = $request->input('titolo');
+        $post->sotto_titolo = $request->input('sotto_titolo');
+        $post->content = $request->input('content');
+        $post->slug = $request->input('slug');
+        $post->autore = $request->input('autore');
+        $post->immagine = $request->input('immagine');
+        $post->save();
+        return redirect()->route('home');
+      }
+    }
+    public function show($id){
+      $postVisionato = post::where('id', $id)->first();
+      if ($postVisionato == null)
+        abort(404);
+      return view('post_dettaglio',['post'=>$postVisionato]);
     }
 }

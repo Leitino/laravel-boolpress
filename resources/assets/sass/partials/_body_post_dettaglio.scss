@@ -1,0 +1,22 @@
+.body_container{
+  margin-top: 10px;
+  width: 80%;
+  height: 100%;
+  .post-dettaglio{
+    width: 90%;
+    height: 500px;
+    margin: auto;
+    .post-dettaglio_img{
+      float: left;
+      width: 50%;
+      img{
+        width: 100%;
+      }
+    }
+    .post-dettaglio_testo{
+      padding: 10px;
+      float: left;
+      width: 50%;
+    }
+  }
+}

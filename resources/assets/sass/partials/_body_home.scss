@@ -1,0 +1,42 @@
+.body_container{
+  width: 70%;
+  height: 100%;
+  margin: auto;
+  .post{
+    margin-top: 5px;
+    width: 100%;
+    height: 170px;
+    border: 7px solid $colore_primario;
+    word-wrap: break-word;
+    text-overflow: clip;
+    .post_img{
+      width: 30%;
+      height: 100%;
+      float: left;
+      img{
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .post_testo{
+      color :$colore_primario;
+      padding: 10px;
+      width: 70%;
+      height: 100%;
+      float: left;
+      max-height: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      transition: 0.5s;
+      &:hover{
+        background-color: $colore_primario;
+        color:white;
+      }
+
+      h1{
+        color:$colore_boolpress;
+      }
+    }
+  }
+}

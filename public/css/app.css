@@ -39,7 +39,6 @@ header .header_container h1 {
 
 .body_container form {
   padding-top: 10px;
-  line-height: 100px;
   background-color: #68db4e;
   width: 100%;
   margin: auto;
@@ -54,5 +53,81 @@ header .header_container h1 {
 .body_container form #content {
   width: 80%;
   max-height: 100px;
+}
+
+.body_container {
+  width: 70%;
+  height: 100%;
+  margin: auto;
+}
+
+.body_container .post {
+  margin-top: 5px;
+  width: 100%;
+  height: 170px;
+  border: 7px solid #28292b;
+  word-wrap: break-word;
+  text-overflow: clip;
+}
+
+.body_container .post .post_img {
+  width: 30%;
+  height: 100%;
+  float: left;
+}
+
+.body_container .post .post_img img {
+  width: 100%;
+  height: 100%;
+}
+
+.body_container .post .post_testo {
+  color: #28292b;
+  padding: 10px;
+  width: 70%;
+  height: 100%;
+  float: left;
+  max-height: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.body_container .post .post_testo:hover {
+  background-color: #28292b;
+  color: white;
+}
+
+.body_container .post .post_testo h1 {
+  color: #68db4e;
+}
+
+.body_container {
+  margin-top: 10px;
+  width: 80%;
+  height: 100%;
+}
+
+.body_container .post-dettaglio {
+  width: 90%;
+  height: 500px;
+  margin: auto;
+}
+
+.body_container .post-dettaglio .post-dettaglio_img {
+  float: left;
+  width: 50%;
+}
+
+.body_container .post-dettaglio .post-dettaglio_img img {
+  width: 100%;
+}
+
+.body_container .post-dettaglio .post-dettaglio_testo {
+  padding: 10px;
+  float: left;
+  width: 50%;
 }
 
