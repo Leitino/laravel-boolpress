@@ -1,8 +1,11 @@
 @extends('layout')
+@section('header')
+  <h1>aggiungi o modifica</h1>
+
+@endsection
 @section('section')
   <div class="body_container">
     <div class="post-add">
-      <h1>aggiungi nuovo post</h1>
 
     </div>
     <form class="" action="{{route('add')}}" method="post">

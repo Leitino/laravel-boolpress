@@ -32,6 +32,15 @@
       &:hover{
         background-color: $colore_primario;
         color:white;
+        border: 5px solid white;
+      }
+      &:hover a{
+        color:$colore_boolpress;
+      }
+      a{
+        padding-left: 5px;
+        padding-top: 5px;
+        color: red;
       }
 
       h1{

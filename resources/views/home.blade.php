@@ -1,4 +1,7 @@
 @extends('layout')
+@section('header')
+  <h1>Boolpress Home</h1>
+@endsection
 @section('section')
   <div class="body_container">
     @foreach ($posts as $post)

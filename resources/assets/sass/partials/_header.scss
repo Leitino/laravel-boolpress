@@ -4,14 +4,29 @@ header{
   background-color: $colore_primario;
   border-bottom:2px solid $colore_boolpress;
   .header_container{
+    display: flex;
+    justify-content: space-between;
     width: 80%;
     height: 100%;
     margin:auto;
     color:$colore_boolpress;
     line-height: 70px;
     h1{
-      text-align: center;
+      text-align: left;
       font-size: 2.5em;
+    }
+    .amministrazione{
+      a:hover{
+        color:$colore_boolpress;
+      }
+      a{
+        padding-right: 15px;
+        display: inline-block;
+        transition: 0.5s;
+        text-decoration: none;
+        color:white;
+      }
+
     }
   }
 }

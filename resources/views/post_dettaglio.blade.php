@@ -1,4 +1,7 @@
 @extends('layout')
+@section('header')
+  <h1>dettaglio del post</h1>
+@endsection
 @section('section')
   <div class="body_container">
     <div class="post-dettaglio">

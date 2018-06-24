@@ -1,4 +1,8 @@
 @extends('layout')
+@section('header')
+  <h1>Modifica post</h1>
+
+@endsection
 @section('section')
   <div class="body_container">
     <form class="" action="{{route('edit', ['id'=>$post['id']])}}" method="post">
