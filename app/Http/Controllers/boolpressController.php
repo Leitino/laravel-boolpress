@@ -7,10 +7,11 @@ use App\post;
 
 class boolpressController extends Controller
 {
-    public function home(){
+    public function homePage(){
       $posts = post::all();
-      return view ('home',['posts'=>$posts]);
+      return view ('homePage',['posts'=>$posts]);
     }
+    
     public function add(Request $request){
       if ($request-> method()=='GET'){
         $posts = post::all();
@@ -25,7 +26,7 @@ class boolpressController extends Controller
         $post->autore = $request->input('autore');
         $post->immagine = $request->input('immagine');
         $post->save();
-        return redirect()->route('home');
+        return redirect()->route('homePage');
       }
     }
     public function show($id){
@@ -48,7 +49,7 @@ class boolpressController extends Controller
         $post->autore = $request->input('autore');
 
         $post->save();
-        return redirect('home');
+        return redirect('homePage');
 
       }
     }
@@ -56,6 +57,6 @@ class boolpressController extends Controller
       $post = post::find($id);
 
       $post->delete();
-      return redirect('home');
+      return redirect('homePage');
     }
 }

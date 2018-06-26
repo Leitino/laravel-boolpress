@@ -1,23 +1,23 @@
-@extends('layout')
-@section('header')
-  <h1>Boolpress Home</h1>
-@endsection
-@section('section')
-  <div class="body_container">
-    @foreach ($posts as $post)
-        <div class="post">
-          <div class="post_img">
-            <img src="{{$post['immagine']}}" alt="">
-          </div>
-        <a href="{{route('show', ['id'=>$post['id']])}}">  <div class="post_testo">
-            <h1>{{$post['titolo']}}</h1>
-            <h3>{{$post['sotto_titolo']}}</h3>
-            <p>{{!!$post['content']!!}}</p>
-            <h5>{{$post['slug']}}</h5>
-            <h5>{{$post['autore']}}</h5>
-          </div></a>
-        </div>
-      @endforeach
-  </div>
+@extends('layouts.app')
 
+@section('content')
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="panel panel-default">
+                <div class="panel-heading">Dashboard</div>
+
+                <div class="panel-body">
+                    @if (session('status'))
+                        <div class="alert alert-success">
+                            {{ session('status') }}
+                        </div>
+                    @endif
+
+                    You are logged in!
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 @endsection
